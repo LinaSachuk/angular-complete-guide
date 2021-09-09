@@ -29,10 +29,4 @@ export class ServersComponent implements OnInit {
     this.serverName = (<HTMLInputElement>event.target).value;
     console.log(event);
   }
-
-  resetUserName(){
-    if(this.userName){
-      this.userName =""
-    }
-  }
 }
