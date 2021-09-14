@@ -6,13 +6,6 @@
   Master Angular 12 (formerly "Angular 2") and build awesome, reactive web apps
   with the successor of Angular.js
 </p>
-<ul *ngFor="let click of clicks; index as i">
-  <li
-    [ngStyle]="{
-      backgroundColor: i > 4 ? 'lightblue' : 'transparent',
-      color: i > 4 ? 'white' : 'black'
-    }"
-  >
-    {{ i }}. {{ click }}
-  </li>
+<ul *ngFor="let click of clicks; let index; as: i">
+  <li>{{ i }}. {{ click }}</li>
 </ul>

@@ -42,7 +42,5 @@ export class ServersComponent implements OnInit {
     this.show = !this.show;
     console.log(event);
     this.clicks.push(event.timeStamp);
-    console.log(this.clicks);
-
   }
 }

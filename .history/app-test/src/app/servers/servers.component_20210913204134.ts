@@ -11,7 +11,6 @@ export class ServersComponent implements OnInit {
   serverName = '';
   userName = "";
   show=true;
-  clicks: number[] = [];
 
 
   constructor() {
@@ -36,13 +35,5 @@ export class ServersComponent implements OnInit {
     if(this.userName){
       this.userName =""
     }
-  }
-
-  onButtonClick(event: any){
-    this.show = !this.show;
-    console.log(event);
-    this.clicks.push(event.timeStamp);
-    console.log(this.clicks);
-
   }
 }

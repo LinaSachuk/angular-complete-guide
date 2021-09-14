@@ -7,12 +7,7 @@
   with the successor of Angular.js
 </p>
 <ul *ngFor="let click of clicks; index as i">
-  <li
-    [ngStyle]="{
-      backgroundColor: i > 4 ? 'lightblue' : 'transparent',
-      color: i > 4 ? 'white' : 'black'
-    }"
-  >
+  <li [ngStyle]="{ backgroundColor: i > 4 ? 'lightblue' : 'transparent' }">
     {{ i }}. {{ click }}
   </li>
 </ul>
