@@ -1,17 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-cockpit',
-  templateUrl: './cockpit.component.html',
-  styleUrls: ['./cockpit.component.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class CockpitComponent implements OnInit {
+export class AppComponent {
+  serverElements = [];
   newServerName = '';
   newServerContent = '';
-  constructor() { }
 
-  ngOnInit(): void {
-  }
   onAddServer() {
     this.serverElements.push({
       type: 'server',
