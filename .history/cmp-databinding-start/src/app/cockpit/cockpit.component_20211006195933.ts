@@ -20,17 +20,17 @@ export class CockpitComponent implements OnInit {
 
   onAddServer(serverNameInput: HTMLInputElement): void {
     console.log(this.serverContentInput)
-    this.serverCreated.emit({
-      serverName: serverNameInput.value,
-      serverContent: this.serverContentInput.nativeElement.value,
-    })
+    // this.serverCreated.emit({
+    //   serverName: serverNameInput.value,
+    //   serverContent: this.newServerContent
+    // })
   }
 
   onAddBlueprint(serverNameInput: HTMLInputElement): void {
-    this.blueprintCreated.emit({
-      serverName: serverNameInput.value,
-      serverContent: this.serverContentInput.nativeElement.value,
-    })
+    // this.blueprintCreated.emit({
+    //   serverName: serverNameInput.value,
+    //   serverContent: this.newServerContent
+    // })
   }
 
 }
