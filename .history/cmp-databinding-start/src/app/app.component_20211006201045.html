@@ -5,11 +5,11 @@
         <div class="col-xs-12">
             <app-server-element *ngFor="let serverElement of serverElements" [srvElement]="serverElement">
                 <p>
-                    <strong *ngIf="serverElement.type === 'server'" style="color: red">{{
-            serverElement.content
+                    <strong *ngIf="element.type === 'server'" style="color: red">{{
+            element.content
           }}</strong>
-                    <em *ngIf="serverElement.type === 'blueprint'" style="color: blue">{{
-            serverElement.content
+                    <em *ngIf="element.type === 'blueprint'" style="color: blue">{{
+            element.content
           }}</em>
                 </p>
             </app-server-element>

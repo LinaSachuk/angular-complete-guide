@@ -14,6 +14,6 @@ export class ServerElementComponent implements OnInit {
   ngOnInit(): void {
     console.log('in the ngOnInit.')}
 
-
+  }
 
 }
