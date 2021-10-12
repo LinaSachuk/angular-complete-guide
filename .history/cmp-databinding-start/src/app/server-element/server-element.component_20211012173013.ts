@@ -35,7 +35,6 @@ ngAfterContentChecked(){
 
 ngAfterViewInit(){
   console.log("ngAfterViewInit called.")
-  console.log(this.header.nativeElement.textContent)
 }
 
 ngAfterViewChecked(){
