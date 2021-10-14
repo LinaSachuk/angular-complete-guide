@@ -28,8 +28,6 @@ ngDoCheck(){
 
 ngAfterContentInit(){
   console.log("ngAfterContentInit called.")
-  console.log(this.paragraph.nativeElement.textContent)
-
 }
 
 ngAfterContentChecked(){
