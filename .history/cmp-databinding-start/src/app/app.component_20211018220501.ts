@@ -27,7 +27,6 @@ export class AppComponent {
 
   onStartGame(timeStamp: number){
     this.startGameTimes.push(timeStamp);
-    console.log('times:', this.startGameTimes)
   }
 
   onChangeFirst(){

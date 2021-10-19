@@ -15,7 +15,7 @@ export class GameControlComponent implements OnInit {
   }
 
   onStartGame(event){
-    this.startEvent.emit(event.timeStamp);
+    this.startEvent.emit(event.timeStamp)
     console.log('Start', event.timeStamp)
   }
 
