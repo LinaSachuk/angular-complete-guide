@@ -26,13 +26,13 @@ export class AppComponent {
   }
 
   onStartGame(timeStamp: number){
-    this.startGameTime = timeStamp;
-    console.log('times:', this.startGameTime)
+    this.startGameTimes = timeStamp;
+    console.log('times:', this.startGameTimes)
   }
 
   onStopGame(timeStamp: number[]){
-    this.startGameTime = 0;
-    console.log('times after stop:', this.startGameTime)
+    this.startGameTimes = [];
+    console.log('times after stop:', this.startGameTimes)
 
   }
 

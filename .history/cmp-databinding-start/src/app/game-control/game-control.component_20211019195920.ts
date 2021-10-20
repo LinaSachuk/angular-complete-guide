@@ -8,11 +8,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class GameControlComponent implements OnInit {
 
 
-  @Output() startEvent = new EventEmitter<number>();
-  @Output() stopEvent = new EventEmitter<number>();
+  @Output() startEvent = new EventEmitter<number[]>();
+  @Output() stopEvent = new EventEmitter<number[]>();
 
 
-  gameTimes: number ;
+  gameTimes: number[] = [];
 
   constructor() { }
 
@@ -23,7 +23,7 @@ export class GameControlComponent implements OnInit {
   }
 
   onStartGame(event){
-    this.gameTimes=event.timeStamp;
+    this.gameTimes.push(event.timeStamp);
     this.startEvent.emit(this.gameTimes);
 
   }

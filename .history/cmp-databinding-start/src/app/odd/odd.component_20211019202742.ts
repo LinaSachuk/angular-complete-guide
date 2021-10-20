@@ -10,19 +10,18 @@ export class OddComponent implements OnInit, OnChanges {
 
 @Input() time: number;
 
-odd:boolean = false;
-
 
   constructor() { }
 
   ngOnInit(): void {
+    this.time = 0;
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-
-  console.log(this.time/2);
-
-
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(this.time)
   }
- isEven = num => ((num % 2) == 0) ? true : false;
+
+isOdd(n) {
+    return Math.abs(n % 2) == 1;
+ }
 }

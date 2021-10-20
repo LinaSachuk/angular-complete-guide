@@ -16,6 +16,7 @@ odd:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    this.time = 0;
   }
 
   ngOnChanges(changes: SimpleChanges) {

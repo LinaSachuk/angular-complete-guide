@@ -16,11 +16,12 @@ odd:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    this.time = 0;
   }
 
   ngOnChanges(changes: SimpleChanges) {
 
-  console.log(this.time/2);
+  console.log(this.isEven(this.time) )
 
 
   }

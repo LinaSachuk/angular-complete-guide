@@ -16,13 +16,21 @@ odd:boolean = false;
   constructor() { }
 
   ngOnInit(): void {
+    this.time = 0;
   }
 
-  ngOnChanges(changes: SimpleChanges) {
-
-  console.log(this.time/2);
-
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(this.time)
+   this.oddOrEven(this.time);
 
   }
- isEven = num => ((num % 2) == 0) ? true : false;
+oddOrEven(num){
+    if(num % 2 == 0){
+      this.odd = false;
+    }
+    this.odd = true;
+    console.log(this.odd)
+
+    return this.odd;
+}
 }

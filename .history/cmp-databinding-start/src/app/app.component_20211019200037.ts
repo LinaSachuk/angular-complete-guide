@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   serverElements = [{type:"server", name:"testServer", content: "Just a test server"}];
-  startGameTime: number;
+  startGameTimes = [];
 
   onServerAdded(serverData:{serverName:string, serverContent: string}) {
     this.serverElements.push({
@@ -25,14 +25,14 @@ export class AppComponent {
     });
   }
 
-  onStartGame(timeStamp: number){
-    this.startGameTime = timeStamp;
-    console.log('times:', this.startGameTime)
+  onStartGame(timeStamp: number[]){
+    this.startGameTimes = timeStamp;
+    console.log('times:', this.startGameTimes)
   }
 
   onStopGame(timeStamp: number[]){
-    this.startGameTime = 0;
-    console.log('times after stop:', this.startGameTime)
+    this.startGameTimes = [];
+    console.log('times:', this.startGameTimes)
 
   }
 
