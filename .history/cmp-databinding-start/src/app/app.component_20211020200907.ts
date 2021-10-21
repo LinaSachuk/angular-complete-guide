@@ -31,13 +31,10 @@ export class AppComponent {
     this.startGameTime = timeStamp;
     console.log('times:', this.startGameTime);
     if(timeStamp % 2 === 0){
-      let p = (timeStamp % 2);
+      let p = timeStamp % 2
       console.log('math:', p);
       this.even = true;
-      this.odd=false;
-
     }else{
-      this.even = false;
       this.odd=true;
     }
     console.log(this.even);
@@ -45,6 +42,8 @@ export class AppComponent {
 
   onStopGame(timeStamp: number[]){
     this.startGameTime = 0;
+    console.log('times after stop:', this.startGameTime)
+
   }
 
   onChangeFirst(){

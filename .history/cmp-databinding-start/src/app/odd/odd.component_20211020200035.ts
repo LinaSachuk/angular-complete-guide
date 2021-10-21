@@ -1,4 +1,4 @@
-import { Component, Input, OnInit,  } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 
 @Component({
@@ -16,7 +16,12 @@ odd:boolean;
   constructor() { }
 
   ngOnInit(): void {
-
+    if(this.time % 2 === 0){
+      console.log('math:', this.time % 2);
+      this.odd = false;
+    }else{
+      this.odd=true;
+    }
   }
 
 

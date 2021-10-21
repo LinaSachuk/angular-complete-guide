@@ -16,7 +16,12 @@ odd:boolean;
   constructor() { }
 
   ngOnInit(): void {
-
+    if(this.time % 2 === 0){
+      console.log('math:', this.time % 2);
+      this.odd = false;
+    }else{
+      this.odd=true;
+    }
   }
 
 

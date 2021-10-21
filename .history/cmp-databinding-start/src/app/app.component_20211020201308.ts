@@ -38,6 +38,7 @@ export class AppComponent {
 
     }else{
       this.even = false;
+
       this.odd=true;
     }
     console.log(this.even);
