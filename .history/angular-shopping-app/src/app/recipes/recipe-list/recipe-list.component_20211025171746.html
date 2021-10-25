@@ -3,8 +3,8 @@
         <div class="button btn btn-succes">New Recipe</div>
     </div>
 </div>
-<div class="row">
+<div *ngFor="let item of recipes" class="row">
     <div class="col-xs-12">
-        <app-recipe-item></app-recipe-item>
+        <app-recipe-item [recipe]="item" (recipeSelected)="onRecipeSelected(item)"></app-recipe-item>
     </div>
 </div>
