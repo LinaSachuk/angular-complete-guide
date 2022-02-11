@@ -1,4 +1,5 @@
 import { EventEmitter } from '@angular/core';
+import { Ingredient } from '../../../../prj-basics-final/src/app/shared/ingredient.model';
 import { Recipe } from './recipe.model';
 
 export class RecipeService {
@@ -8,12 +9,14 @@ export class RecipeService {
     new Recipe(
       'A test recipe',
       'description for panna cotta ',
-      'https://www.liveeatlearn.com/wp-content/uploads/2019/11/vegetarian-panna-cotta-vert-500x375.jpg'
+      'https://www.liveeatlearn.com/wp-content/uploads/2019/11/vegetarian-panna-cotta-vert-500x375.jpg',
+      [new Ingredient('Sugar', 1), new Ingredient('Milk', 4)]
     ),
     new Recipe(
       'A test recipe 2',
       'description for panna cotta 2',
-      'https://www.sugarsaltmagic.com/wp-content/uploads/2019/04/Vanilla-Panna-Cotta-with-Orange-Syrup-FB2.jpg'
+      'https://www.sugarsaltmagic.com/wp-content/uploads/2019/04/Vanilla-Panna-Cotta-with-Orange-Syrup-FB2.jpg',
+      [new Ingredient('Orange', 1), new Ingredient('Cream', 4)]
     ),
   ];
 
