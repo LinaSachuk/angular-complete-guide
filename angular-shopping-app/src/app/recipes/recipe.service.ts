@@ -1,5 +1,5 @@
 import { EventEmitter, Injectable } from '@angular/core';
-import { Ingredient } from '../../../../prj-basics-final/src/app/shared/ingredient.model';
+import { Ingredient } from '../shared/ingredient.model';
 import { Recipe } from './recipe.model';
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
@@ -20,6 +20,12 @@ export class RecipeService {
       'https://www.sugarsaltmagic.com/wp-content/uploads/2019/04/Vanilla-Panna-Cotta-with-Orange-Syrup-FB2.jpg',
       [new Ingredient('Orange', 1), new Ingredient('Cream', 4)]
     ),
+    new Recipe(
+      'A test recipe 3',
+      'description for panna cotta 3',
+      'https://www.thelittleepicurean.com/wp-content/uploads/2019/08/coconut-panna-cotta-latik-1.jpg',
+      [new Ingredient('Apple', 10), new Ingredient('Sugar', 3)]
+    ),
   ];
 
   constructor(private slService: ShoppingListService) {}
@@ -30,5 +36,9 @@ export class RecipeService {
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
+  }
+
+  getRecipe(index: number) {
+    return this.recipes[index];
   }
 }
