@@ -23,7 +23,7 @@ export class RecipeService {
     new Recipe(
       'A test recipe 3',
       'description for panna cotta 3',
-      'https://www.thelittleepicurean.com/wp-content/uploads/2019/08/coconut-panna-cotta-latik-1.jpg',
+      'https://media.istockphoto.com/photos/raspberry-panna-cotta-with-raspberry-jelly-italian-dessert-homemade-picture-id1255776846?k=20&m=1255776846&s=612x612&w=0&h=RFgVYpZfGf4SEgpqkS_ICsegKmv3gw7nsx2dCs1_jDU=',
       [new Ingredient('Apple', 10), new Ingredient('Sugar', 3)]
     ),
   ];
