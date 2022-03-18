@@ -12,18 +12,23 @@
           </button>
                     <div class="form-group">
                         <label for="email">Mail</label>
-                        <input type="email" id="email" class="form-control" ngModel name="email" required email />
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="secret">Secret Questions</label>
-                    <select id="secret" class="form-control" ngModel name="secret">
+                        <input type="email" id="email" class="form-control" ngModel name="email" required email #email="ngModel" />
+
+                        <span class="help-block" *ngIf="!email.valid">Please enter a valid email!</span
+            >
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="secret">Secret Questions</label>
+          <select id="secret" class="form-control" ngModel name="secret">
             <option value="pet">Your first Pet?</option>
             <option value="teacher">Your first teacher?</option>
           </select>
-                </div>
-                <button class="btn btn-primary" type="submit">Submit</button>
-            </form>
         </div>
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+          Submit
+        </button>
+      </form>
     </div>
+  </div>
 </div>
