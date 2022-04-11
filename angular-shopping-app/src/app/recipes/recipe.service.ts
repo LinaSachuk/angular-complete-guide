@@ -1,33 +1,48 @@
 import { Injectable } from '@angular/core';
-import { Ingredient } from '../shared/ingredient.model';
-import { Recipe } from './recipe.model';
-import { ShoppingListService } from '../shopping-list/shopping-list.service';
 import { Subject } from 'rxjs';
+
+import { Recipe } from './recipe.model';
+import { Ingredient } from '../shared/ingredient.model';
+import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 @Injectable()
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
 
-  private recipes: Recipe[] = [
-    new Recipe(
-      'A test recipe',
-      'description for panna cotta ',
-      'https://www.liveeatlearn.com/wp-content/uploads/2019/11/vegetarian-panna-cotta-vert-500x375.jpg',
-      [new Ingredient('Sugar', 1), new Ingredient('Milk', 4)]
-    ),
-    new Recipe(
-      'A test recipe 2',
-      'description for panna cotta 2',
-      'https://www.sugarsaltmagic.com/wp-content/uploads/2019/04/Vanilla-Panna-Cotta-with-Orange-Syrup-FB2.jpg',
-      [new Ingredient('Orange', 1), new Ingredient('Cream', 4)]
-    ),
-    new Recipe(
-      'A test recipe 3',
-      'description for panna cotta 3',
-      'https://media.istockphoto.com/photos/raspberry-panna-cotta-with-raspberry-jelly-italian-dessert-homemade-picture-id1255776846?k=20&m=1255776846&s=612x612&w=0&h=RFgVYpZfGf4SEgpqkS_ICsegKmv3gw7nsx2dCs1_jDU=',
-      [new Ingredient('Apple', 10), new Ingredient('Sugar', 3)]
-    ),
-  ];
+  // private recipes: Recipe[] = [
+  //  new Recipe(
+  //     'A test recipe',
+  //     'description for panna cotta ',
+  //     'https://www.liveeatlearn.com/wp-content/uploads/2019/11/vegetarian-panna-cotta-vert-500x375.jpg',
+  //     [new Ingredient('Sugar', 1), new Ingredient('Milk', 4)]
+  //   ),
+  //   new Recipe(
+  //     'A test recipe 2',
+  //     'description for panna cotta 2',
+  //     'https://www.sugarsaltmagic.com/wp-content/uploads/2019/04/Vanilla-Panna-Cotta-with-Orange-Syrup-FB2.jpg',
+  //     [new Ingredient('Orange', 1), new Ingredient('Cream', 4)]
+  //   ),
+  //   new Recipe(
+  //     'A test recipe 3',
+  //     'description for panna cotta 3',
+  //     'https://media.istockphoto.com/photos/raspberry-panna-cotta-with-raspberry-jelly-italian-dessert-homemade-picture-id1255776846?k=20&m=1255776846&s=612x612&w=0&h=RFgVYpZfGf4SEgpqkS_ICsegKmv3gw7nsx2dCs1_jDU=',
+  //     [new Ingredient('Apple', 10), new Ingredient('Sugar', 3)]
+  //   ),
+  //   new Recipe(
+  //     'Tasty Schnitzel',
+  //     'A super-tasty Schnitzel - just awesome!',
+  //     'https://upload.wikimedia.org/wikipedia/commons/7/72/Schnitzel.JPG',
+  //     [new Ingredient('Meat', 1), new Ingredient('French Fries', 20)]
+  //   ),
+  //   new Recipe(
+  //     'Big Fat Burger',
+  //     'What else you need to say?',
+  //     'https://upload.wikimedia.org/wikipedia/commons/b/be/Burger_King_Angus_Bacon_%26_Cheese_Steak_Burger.jpg',
+  //     [new Ingredient('Buns', 2), new Ingredient('Meat', 1)]
+  //   )
+  // ];
+
+  private recipes: Recipe[] = [];
 
   constructor(private slService: ShoppingListService) {}
 
