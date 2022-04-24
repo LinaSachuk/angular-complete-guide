@@ -1,4 +1,4 @@
-import { Action } from 'rxjs/store';
+import { Action } from 'ngrx/store';
 import { Ingredient } from '../shared/ingredient.model';
 
 const initialState = {
