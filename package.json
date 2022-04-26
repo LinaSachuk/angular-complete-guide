@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@ngrx/store": "^13.1.0",
     "rxjs": "^6.6.7",
     "rxjs-compat": "^6.6.7"
   }
